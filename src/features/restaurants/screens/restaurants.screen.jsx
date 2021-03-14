@@ -5,19 +5,19 @@ import { Searchbar } from "react-native-paper";
 
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 
+const ANDROID_TOP_MARGIN = StatusBar.currentHeight;
 const SafeArea = styled.SafeAreaView`
   flex: 1;
+  ${ANDROID_TOP_MARGIN && `margin-top: ${ANDROID_TOP_MARGIN}px`}
 `;
 
-const ANDROID_TOP_MARGIN = StatusBar.currentHeight;
 const SearchContainer = styled.View`
-  padding: 16px;
-  margin-top: ${ANDROID_TOP_MARGIN};
+  padding: ${(props) => props.theme.space[3]};
 `;
 
 const RestaurantListContainer = styled.View`
-  padding: 16px;
-  background-color: blue;
+  padding: ${(props) => props.theme.space[3]};
+  background-color: ${(props) => props.theme.colours.bg.primary};
   flex: 1;
 `;
 
