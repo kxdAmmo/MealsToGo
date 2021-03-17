@@ -1,6 +1,16 @@
 {
-    "extends": "@react-native-community",
-    "rules": {
-        "quotes": [2, "double", { "avoidEscape": true }]
+  "extends": "@react-native-community",
+  "parser": "babel-eslint",
+  "rules": {
+    "quotes": [2, "double", "avoid-escape"],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "singleQuote": false,
+        "jsxSingleQuote": false,
+        "bracketSpacing": true
       }
+    ]
+  }
 }
