@@ -21,15 +21,15 @@ export default function App() {
   });
 
   if (!oswaldLoaded || !latoLoaded) {
-    null;
+    return null;
   }
 
   return (
     <>
       <ThemeProvider theme={theme}>
         <RestaurantsScreen />
-        <ExpoStatusBar style="auto" />
       </ThemeProvider>
+      <ExpoStatusBar style="auto" />
     </>
   );
 }
